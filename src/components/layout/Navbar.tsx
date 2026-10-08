@@ -29,7 +29,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <span className="text-xs font-semibold text-muted">ID / EN</span>
+          {/* <span className="text-xs font-semibold text-muted">ID / EN</span> */}
           <ButtonLink
             href={buildWhatsAppUrl(whatsappMessage)}
             target="_blank"
