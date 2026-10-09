@@ -102,15 +102,14 @@ export function Products({ searchQuery = '' }: ProductsProps) {
       <Container>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
+            {/* <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
               Product Discovery
-            </p>
+            </p> */}
             <h2 id="products-title" className="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               Produk &amp; Solusi Retail
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-              Temukan beberapa pilihan produk retail untuk membantu kebutuhan display, penyimpanan,
-              dan perlengkapan toko Anda.
+              Solusi retail yang dapat disesuaikan dengan kebutuhan toko Anda.
             </p>
           </div>
 
@@ -161,7 +160,17 @@ export function Products({ searchQuery = '' }: ProductsProps) {
                   <div className="absolute left-5 top-5 z-10 rounded-full bg-white/90 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-brand-secondary">
                     {getCategoryName(product.categoryId)}
                   </div>
-                  <ProductVisual variant={product.visual} />
+                  {product.image ? (
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <ProductVisual variant={product.visual} />
+                  )}
                 </div>
 
                 <div className="p-6">

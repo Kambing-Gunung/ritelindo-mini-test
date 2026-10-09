@@ -7,7 +7,8 @@ import { Products } from '../components/sections/Products';
 import { WhyRitelindo } from '../components/sections/WhyRitelindo';
 import { Services } from '../components/sections/Services';
 import { HowItWorks } from '../components/sections/HowItWorks';
-import { TrustProof } from '../components/sections/TrustProof';
+import { Trust } from '../components/sections/Trust';
+import { Proof } from '../components/sections/Proof';
 import { FAQ } from '../components/sections/FAQ';
 import { FinalCTA } from '../components/sections/FinalCTA';
 
@@ -29,7 +30,8 @@ export function HomePage() {
         <WhyRitelindo />
         <Services />
         <HowItWorks />
-        <TrustProof />
+        <Trust />
+        <Proof />
         <FAQ />
         <FinalCTA />
       </main>

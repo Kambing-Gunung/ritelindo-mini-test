@@ -2,9 +2,7 @@ import { useState } from 'react';
 import logo from '../../assets/logo/ritelindo-wordmark.png';
 import { buildWhatsAppUrl, siteConfig } from '../../config/site';
 import { ButtonLink } from '../ui/Button';
-
-const whatsappMessage =
-  'Halo Ritelindo, saya tertarik dengan solusi rak untuk kebutuhan toko saya dan ingin konsultasi gratis.';
+import { Icon } from '../ui/Icon';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +27,15 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          {/* <span className="text-xs font-semibold text-muted">ID / EN</span> */}
           <ButtonLink
-            href={buildWhatsAppUrl(whatsappMessage)}
+            href={buildWhatsAppUrl(siteConfig.whatsapp.message)}
             target="_blank"
             rel="noreferrer"
-            className="bg-brand-primary hover:bg-brand-secondary"
+            className="gap-2 bg-brand-primary hover:bg-brand-secondary"
           >
+            <Icon name="whatsapp" className="size-6" />
             Konsultasi WA Gratis
+            <Icon name="arrow" />
           </ButtonLink>
         </div>
 
@@ -49,11 +48,7 @@ export function Navbar() {
           className="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink transition-colors hover:bg-surface lg:hidden"
         >
           <span className="sr-only">Menu</span>
-          <span className="flex flex-col gap-1.5">
-            <span className="block h-0.5 w-5 bg-current" />
-            <span className="block h-0.5 w-5 bg-current" />
-            <span className="block h-0.5 w-5 bg-current" />
-          </span>
+          <Icon name={isOpen ? 'close' : 'menu'} className="size-5" />
         </button>
       </div>
 
@@ -71,12 +66,14 @@ export function Navbar() {
               </a>
             ))}
             <ButtonLink
-              href={buildWhatsAppUrl(whatsappMessage)}
+              href={buildWhatsAppUrl(siteConfig.whatsapp.message)}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 w-full bg-brand-primary hover:bg-brand-secondary"
+              className="gap-2 mt-2 w-full bg-brand-primary hover:bg-brand-secondary"
             >
+              <Icon name="whatsapp" className="size-6" />
               Konsultasi WA Gratis
+              <Icon name="arrow" />
             </ButtonLink>
           </div>
         </nav>

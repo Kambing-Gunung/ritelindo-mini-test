@@ -4,63 +4,19 @@ import { Container } from '../ui/Container';
 
 function ServiceVisual({ service }: { service: Service }) {
   return (
-    <div
-      aria-hidden="true"
-      className={`relative aspect-[16/10] overflow-hidden rounded-2xl border border-line ${
-        service.tone === 'blue'
-          ? 'bg-brand-primary'
-          : service.tone === 'slate'
-            ? 'bg-slate-200'
-            : service.tone === 'warm'
-              ? 'bg-amber-50'
-              : 'bg-surface-strong'
-      }`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgb(255_255_255_/_0.7),transparent_32%)]" />
+    <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-surface-strong">
+      <img
+        src={service.image}
+        alt=""
+        aria-hidden="true"
+        className={`size-full ${service.imageFit === 'contain' ? 'object-contain p-5' : 'object-cover'}`}
+        loading="lazy"
+        decoding="async"
+      />
 
-      {service.id === 'consultation-layout' && (
-        <>
-          <div className="absolute left-[12%] top-[23%] h-[46%] w-[56%] rounded-lg border-2 border-white/70 bg-white/10" />
-          <div className="absolute bottom-[19%] left-[17%] h-1.5 w-[46%] rounded-full bg-white/65" />
-          <div className="absolute left-[23%] top-[34%] h-1 w-[36%] rounded-full bg-white/45" />
-          <div className="absolute right-[13%] top-[28%] h-[54%] w-[20%] rounded-xl border border-white/50 bg-white/10" />
-          <div className="absolute bottom-[15%] right-[17%] h-2.5 w-20 rounded-full bg-white/50" />
-        </>
-      )}
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-primary/25 to-transparent" />
 
-      {service.id === 'retail-display' && (
-        <>
-          <div className="absolute inset-x-[15%] top-[20%] h-1.5 rounded-full bg-brand-primary/80" />
-          <div className="absolute inset-x-[15%] top-[43%] h-1.5 rounded-full bg-brand-primary/80" />
-          <div className="absolute inset-x-[15%] top-[66%] h-1.5 rounded-full bg-brand-primary/80" />
-          <div className="absolute bottom-[15%] left-[20%] top-[15%] w-2 rounded-full bg-brand-primary" />
-          <div className="absolute bottom-[15%] right-[20%] top-[15%] w-2 rounded-full bg-brand-primary" />
-          <div className="absolute bottom-[22%] left-[27%] h-12 w-10 rounded-md border border-brand-primary/30 bg-white/80" />
-          <div className="absolute bottom-[22%] left-[43%] h-16 w-12 rounded-md border border-brand-primary/30 bg-white/80" />
-          <div className="absolute bottom-[22%] right-[27%] h-10 w-14 rounded-md border border-brand-primary/30 bg-white/80" />
-        </>
-      )}
-
-      {service.id === 'custom' && (
-        <>
-          <div className="absolute left-[13%] top-[25%] h-24 w-24 rounded-full border-[12px] border-brand-secondary/80" />
-          <div className="absolute bottom-[16%] right-[15%] h-28 w-32 rounded-2xl border-2 border-brand-primary/55 bg-white/60" />
-          <div className="absolute bottom-[28%] left-[23%] h-2 w-[42%] rounded-full bg-brand-primary/70" />
-          <div className="absolute bottom-[35%] left-[29%] h-2 w-[29%] rounded-full bg-brand-primary/45" />
-        </>
-      )}
-
-      {service.id === 'store-interior' && (
-        <>
-          <div className="absolute inset-x-[10%] bottom-0 top-[16%] rounded-t-[2rem] bg-white/80" />
-          <div className="absolute bottom-[16%] left-[17%] h-[48%] w-[22%] rounded-xl border border-brand-primary/15 bg-surface-strong" />
-          <div className="absolute bottom-[16%] left-[43%] h-[56%] w-[22%] rounded-xl border border-brand-primary/15 bg-surface-strong" />
-          <div className="absolute bottom-[16%] right-[16%] h-[42%] w-[17%] rounded-xl border border-brand-primary/15 bg-surface-strong" />
-          <div className="absolute left-[14%] right-[14%] top-[24%] h-2 rounded-full bg-brand-primary/15" />
-        </>
-      )}
-
-      <span className="absolute bottom-3 left-3 rounded-full bg-white/85 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.14em] text-brand-primary backdrop-blur">
+      <span className="absolute bottom-3 left-3 rounded-full bg-white/90 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.14em] text-brand-primary backdrop-blur">
         {service.eyebrow}
       </span>
     </div>
@@ -85,14 +41,14 @@ export function Services() {
       <Container className="py-20 sm:py-24">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
+            {/* <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
               Services
-            </p>
+            </p> */}
             <h2 id="services-title" className="text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              Layanan Utama
+              Layanan Utama Kami
             </h2>
-            <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-              Dari perencanaan hingga penataan toko, temukan layanan yang sesuai dengan kebutuhan retail Anda.
+            <p className="mt-4 text-base lg:text-nowrap leading-7 text-muted sm:text-lg">
+              Solusi lengkap untuk kebutuhan retail Anda, dari perencanaan hingga toko siap digunakan.
             </p>
           </div>
 

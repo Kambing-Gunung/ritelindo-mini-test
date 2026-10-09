@@ -7,9 +7,9 @@ export type FAQItem = {
 export const faqItems: FAQItem[] = [
   {
     id: 'custom',
-    question: 'Apakah rak bisa dibuat custom?',
+    question: 'Apakah rak bisa custom ukuran dan warna?',
     answer:
-      'Bisa. Ritelindo menyediakan opsi custom yang dapat disesuaikan dengan kebutuhan dan ukuran ruangan toko Anda.',
+      'Bisa. Ritelindo menyediakan banyak opsi custom yang dapat disesuaikan dengan kebutuhan dan ukuran ruangan toko Anda.',
   },
   {
     id: 'consultation',
@@ -19,21 +19,21 @@ export const faqItems: FAQItem[] = [
   },
   {
     id: 'shipping',
-    question: 'Apakah tersedia gratis ongkir?',
+    question: 'Bagaimana proses pengirimannya?',
     answer:
-      'Ritelindo memberikan gratis ongkir untuk area Jawa dan Bali sesuai penawaran yang tercantum pada brief layanan.',
+      'Tim Ritelindo akan mengatur jadwal pengiriman dan mengirimkan produk langsung ke lokasi toko.',
   },
   {
     id: 'assembly',
     question: 'Apakah tersedia layanan perakitan?',
     answer:
-      'Ya. Ritelindo menyediakan gratis perakitan untuk area Jawa Timur, Jawa Tengah, dan DIY sesuai penawaran layanan.',
+      'Ya. Ritelindo menyediakan gratis perakitan untuk area Jawa Timur, Jawa Tengah, dan DIY.',
   },
   {
     id: 'purchase',
-    question: 'Apakah pembelian hanya dalam bentuk paket toko?',
+    question: 'Apakah bisa pembelian dalam bentuk satuan?',
     answer:
-      'Tidak. Ritelindo melayani pembelian satuan, paket toko, maupun proyek retail.',
+      'Bisa. Ritelindo melayani pembelian satuan, paket toko, maupun kebutuhan dalam skala proyek retail.',
   },
   {
     id: 'interior',

@@ -1,6 +1,8 @@
 import { buildWhatsAppUrl } from '../../config/site';
 import { processSteps } from '../../data/process';
+
 import { Container } from '../ui/Container';
+import { Icon } from '../ui/Icon';
 
 const whatsappUrl = buildWhatsAppUrl(
   'Halo Ritelindo, saya ingin konsultasi gratis mengenai kebutuhan setup toko saya.',
@@ -15,18 +17,17 @@ export function HowItWorks() {
     >
       <Container className="py-16 sm:py-20 lg:py-24">
         <div className="max-w-2xl">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+          {/* <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
             How It Works
-          </p>
+          </p> */}
           <h2
             id="process-title"
             className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Bagaimana Proses Konsultasi &amp; Setup Toko?
+            Bagaimana Prosesnya?
           </h2>
-          <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg">
-            Mulai dari konsultasi hingga kebutuhan toko siap digunakan, prosesnya dibuat sederhana
-            agar Anda dapat memahami langkah berikutnya dengan jelas.
+          <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg md:text-nowrap">
+            Mulai dari konsultasi hingga toko siap digunakan, semua akan kami bantu.
           </p>
         </div>
 
@@ -58,9 +59,9 @@ export function HowItWorks() {
 
         <div className="mt-12 flex flex-col gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:p-6 lg:mt-14">
           <div>
-            <p className="text-sm font-semibold text-white">Mulai dengan konsultasi gratis.</p>
+            <p className="text-sm font-semibold text-white">Mulai dengan konsultasi sekarang.</p>
             <p className="mt-1 text-sm leading-6 text-white/65">
-              Sampaikan kebutuhan toko Anda dan lanjutkan dari langkah yang paling sesuai.
+              Dapatkan konsultasi gratis sekarang dan wujudkan toko impian Anda.
             </p>
           </div>
 
@@ -68,10 +69,11 @@ export function HowItWorks() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-brand-cta px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-cta/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-brand-cta px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-cta/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
+            <Icon name="whatsapp" className="size-6" />
             Konsultasi WA Gratis
-            <span aria-hidden="true">→</span>
+            <Icon name="arrow" />
           </a>
         </div>
       </Container>

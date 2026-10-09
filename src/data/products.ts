@@ -1,3 +1,10 @@
+import product1Image from '../assets/images/products/product-1.jpg';
+import product2Image from '../assets/images/products/product-2.jpg';
+import product3Image from '../assets/images/products/product-3.jpg';
+import product4Image from '../assets/images/products/product-4.jpg';
+import product5Image from '../assets/images/products/product-5.jpg';
+import product6Image from '../assets/images/products/product-6.jpg';
+
 export type ProductCategory = {
   id: string;
   name: string;
@@ -12,6 +19,7 @@ export type Product = {
   description: string;
   keywords: string[];
   visual: 'single' | 'double' | 'wall' | 'backmesh' | 'basket' | 'counter';
+  image?: string;
 };
 
 export const productCategories: ProductCategory[] = [
@@ -49,6 +57,7 @@ export const products: Product[] = [
     description: 'Rak satu sisi untuk kebutuhan display dan penataan produk toko.',
     keywords: ['single', 'rak single', 'minimarket', 'gondola', 'toko'],
     visual: 'single',
+    image: product1Image,
   },
   {
     id: 'rak-double',
@@ -57,6 +66,7 @@ export const products: Product[] = [
     description: 'Rak dua sisi untuk memaksimalkan area display di ruang retail.',
     keywords: ['double', 'rak double', 'minimarket', 'gondola', 'toko'],
     visual: 'double',
+    image: product2Image,
   },
   {
     id: 'rak-dinding',
@@ -65,6 +75,7 @@ export const products: Product[] = [
     description: 'Rak dinding untuk memanfaatkan area vertikal pada ruang toko.',
     keywords: ['dinding', 'wall', 'rak dinding', 'display', 'toko'],
     visual: 'wall',
+    image: product3Image,
   },
   {
     id: 'rak-mundo-backmesh',
@@ -73,6 +84,7 @@ export const products: Product[] = [
     description: 'Display backmesh dengan kaki untuk kebutuhan penataan produk retail.',
     keywords: ['mundo', 'backmesh', 'rak mundo', 'display', 'retail'],
     visual: 'backmesh',
+    image: product4Image,
   },
   {
     id: 'keranjang-jinjing',
@@ -81,6 +93,7 @@ export const products: Product[] = [
     description: 'Perlengkapan pendukung untuk kebutuhan operasional dan pengalaman belanja.',
     keywords: ['keranjang', 'jinjing', 'shopping basket', 'retail'],
     visual: 'basket',
+    image: product5Image,
   },
   {
     id: 'meja-kasir',
@@ -89,6 +102,7 @@ export const products: Product[] = [
     description: 'Meja kasir sebagai bagian dari kebutuhan perlengkapan area toko.',
     keywords: ['meja', 'kasir', 'checkout', 'counter', 'retail'],
     visual: 'counter',
+    image: product6Image,
   },
 ];
 
