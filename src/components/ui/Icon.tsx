@@ -23,6 +23,7 @@ import tiktokIcon from '../../assets/icons/tiktok.png';
 import mailIcon from '../../assets/icons/mail.png';
 import phoneIcon from '../../assets/icons/phone.png';
 import pinIcon from '../../assets/icons/pin.png';
+import quoteIcon from '../../assets/icons/quote.png';
 
 export type IconName =
   | 'search'
@@ -48,7 +49,8 @@ export type IconName =
   | 'tiktok'
   | 'mail'
   | 'phone'
-  | 'pin';
+  | 'pin'
+  | 'quote';
 
 type IconProps = {
   name: IconName;
@@ -81,6 +83,7 @@ const iconMap: Record<IconName, string> = {
   mail: mailIcon,
   phone: phoneIcon,
   pin: pinIcon,
+  quote: quoteIcon,
 };
 
 export function Icon({

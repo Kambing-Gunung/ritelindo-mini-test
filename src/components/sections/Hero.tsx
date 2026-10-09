@@ -47,9 +47,9 @@ export function Hero({ onProductSearch }: HeroProps) {
       <Container className="py-12 sm:py-16 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.92fr)] lg:grid-rows-[auto_auto] lg:items-center lg:gap-x-16 lg:gap-y-8">
           <div className="order-1 lg:col-start-1 lg:row-start-1">
-            {/* <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
               Ritelindo Akselera Kolaborasi
-            </p> */}
+            </p>
 
             <h1
               id="hero-title"

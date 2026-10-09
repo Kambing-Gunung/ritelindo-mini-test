@@ -3,6 +3,7 @@ import { processSteps } from '../../data/process';
 
 import { Container } from '../ui/Container';
 import { Icon } from '../ui/Icon';
+import { SectionHeading } from '../ui/SectionHeading';
 
 const whatsappUrl = buildWhatsAppUrl(
   'Halo Ritelindo, saya ingin konsultasi gratis mengenai kebutuhan setup toko saya.',
@@ -16,22 +17,16 @@ export function HowItWorks() {
       className="border-b border-brand-primary bg-brand-primary text-white"
     >
       <Container className="py-16 sm:py-20 lg:py-24">
-        <div className="max-w-2xl">
-          {/* <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-white/70">
-            How It Works
-          </p> */}
-          <h2
-            id="process-title"
-            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-          >
-            Bagaimana Prosesnya?
-          </h2>
-          <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg md:text-nowrap">
-            Mulai dari konsultasi hingga toko siap digunakan, semua akan kami bantu.
-          </p>
-        </div>
+        <SectionHeading
+          id="process-title"
+          title="Bagaimana Prosesnya?"
+          description="Mulai dari konsultasi hingga toko siap digunakan, semua akan kami bantu."
+          className="mb-10 lg:mb-12"
+          titleClassName="text-white"
+          descriptionClassName="text-white/70"
+        />
 
-        <ol className="mt-12 grid gap-0 lg:grid-cols-4">
+        <ol className="grid gap-0 lg:grid-cols-4">
           {processSteps.map((step, index) => (
             <li key={step.id} className="relative lg:flex lg:flex-col">
               <div className="flex items-start gap-4 lg:block">

@@ -1,6 +1,7 @@
 import type { Service } from '../../data/services';
 import { services } from '../../data/services';
 import { Container } from '../ui/Container';
+import { SectionHeading } from '../ui/SectionHeading';
 
 function ServiceVisual({ service }: { service: Service }) {
   return (
@@ -40,17 +41,11 @@ export function Services() {
     <section id="services" aria-labelledby="services-title" className="border-b border-line bg-page">
       <Container className="py-20 sm:py-24">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
-            {/* <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-secondary">
-              Services
-            </p> */}
-            <h2 id="services-title" className="text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              Layanan Utama Kami
-            </h2>
-            <p className="mt-4 text-base lg:text-nowrap leading-7 text-muted sm:text-lg">
-              Solusi lengkap untuk kebutuhan retail Anda, dari perencanaan hingga toko siap digunakan.
-            </p>
-          </div>
+          <SectionHeading
+            id="services-title"
+            title="Layanan Utama Kami"
+            description="Solusi lengkap untuk kebutuhan retail Anda, dari perencanaan hingga toko siap digunakan."
+          />
 
           <span className="text-sm font-semibold text-brand-secondary">Solusi retail dalam satu tempat</span>
         </div>

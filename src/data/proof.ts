@@ -1,9 +1,15 @@
+import testimonialImage1 from '../assets/images/proof/testimonial-1.jpg';
+import testimonialImage2 from '../assets/images/proof/testimonial-2.jpg';
+import testimonialImage3 from '../assets/images/proof/testimonial-3.jpeg';
+import testimonialImage4 from '../assets/images/proof/testimonial-4.jpg';
+
 export type Testimonial = {
   rating: number;
   quote: string;
   name: string;
   role: string;
   location: string;
+  image: string;
 };
 
 export const featuredTestimonial: Testimonial[] = [
@@ -14,6 +20,7 @@ export const featuredTestimonial: Testimonial[] = [
     name: 'Bu Putri',
     role: 'Owner Toko Putri Salju',
     location: 'Kab. Malang, Jawa Timur',
+    image: testimonialImage1,
   },
   {
     rating: 5,
@@ -22,6 +29,7 @@ export const featuredTestimonial: Testimonial[] = [
     name: 'Mas Ari',
     role: 'Owner Toko Duta Wijaya',
     location: 'Kab. Bojonegro, Jawa Timur',
+    image: testimonialImage2,
   },
   {
     rating: 5,
@@ -30,6 +38,7 @@ export const featuredTestimonial: Testimonial[] = [
     name: 'Kak Grahito',
     role: 'Owner Supermarket Argensta Jaya',
     location: 'Kab. Pasuruan, Jawa Timur',
+    image: testimonialImage3,
   },
   {
     rating: 5,
@@ -38,5 +47,6 @@ export const featuredTestimonial: Testimonial[] = [
     name: 'Bu Airin',
     role: 'Owner Toko Bangunan Sumber Makmur',
     location: 'Kab. Probolinggo, Jawa Timur',
+    image: testimonialImage4,
   },
 ];

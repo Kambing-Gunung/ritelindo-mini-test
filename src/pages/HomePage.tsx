@@ -11,6 +11,9 @@ import { Trust } from '../components/sections/Trust';
 import { Proof } from '../components/sections/Proof';
 import { FAQ } from '../components/sections/FAQ';
 import { FinalCTA } from '../components/sections/FinalCTA';
+import { StickyWhatsApp } from '../components/ui/StickyWhatsApp';
+
+
 
 export function HomePage() {
   const [productSearch, setProductSearch] = useState('');
@@ -37,6 +40,8 @@ export function HomePage() {
       </main>
 
       <Footer />
+
+      <StickyWhatsApp />
     </>
   );
 }

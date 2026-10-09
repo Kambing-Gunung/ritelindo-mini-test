@@ -1,13 +1,13 @@
-import aeonLogo from '../assets/images/trust/clients/aeon-logo.png';
-import alfamartLogo from '../assets/images/trust/clients/alfamart-logo.png';
-import bohopannaLogo from '../assets/images/trust/clients/bohopanna-logo.png';
-import familymartLogo from '../assets/images/trust/clients/familymart-logo.png';
-import indomaretLogo from '../assets/images/trust/clients/indomaret-logo.png';
-import k3martLogo from '../assets/images/trust/clients/k3mart-logo.jpg';
-import mayoraLogo from '../assets/images/trust/clients/mayora-logo.png';
-import legendLogo from '../assets/images/trust/clients/pusatoleholehlegenda-logo.png';
-import rbGrosirLogo from '../assets/images/trust/clients/rbgrosir-logo.png';
-import wingsLogo from '../assets/images/trust/clients/wings-logo.png';
+import aeonLogo from '../assets/images/trust/aeon-logo.png';
+import alfamartLogo from '../assets/images/trust/alfamart-logo.png';
+import bohopannaLogo from '../assets/images/trust/bohopanna-logo.png';
+import familymartLogo from '../assets/images/trust/familymart-logo.png';
+import indomaretLogo from '../assets/images/trust/indomaret-logo.png';
+import k3martLogo from '../assets/images/trust/k3mart-logo.jpg';
+import mayoraLogo from '../assets/images/trust/mayora-logo.png';
+import legendLogo from '../assets/images/trust/pusatoleholehlegenda-logo.png';
+import rbGrosirLogo from '../assets/images/trust/rbgrosir-logo.png';
+import wingsLogo from '../assets/images/trust/wings-logo.png';
 
 export type ClientBrand = {
   id: string;
